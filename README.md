@@ -8,7 +8,7 @@ The PMU Event Library serves as a repository of PMU measurement data associated 
 ![Harmonics](Event_Library/No_PV/2017-11-05T223320/L.png)
 
 ## LBNL PMU Configuration
-This package was developed for use at Lawrence Berkeley National Laboratory's [Flexgrid](https://flexlab.lbl.gov/introducing-flexgrid) testing facility, which has been outfitted with an array of distribution-scale  PMUs that provide the data contained within this library. The PMUs are arranged in a layered setup, which allows the study of propagation of grid events. It involves one medium-sized office building (blue), a testing facility (yellow), and a photovoltaic array (red) This inter-relationship between PMUs and the exact grid activity which they measure is also illustrated in the one-line electrical diagram::
+This package was developed for use at Lawrence Berkeley National Laboratory's [Flexgrid](https://flexlab.lbl.gov/introducing-flexgrid) testing facility, which has been outfitted with an array of distribution-scale  PMUs that provide the data contained within this library. The PMUs are arranged in a layered setup, which allows the study of propagation of grid events. It involves one medium-sized office building (yellow), a testing facility (blue), and a photovoltaic array (red) This inter-relationship between PMUs and the exact grid activity which they measure is also illustrated in the one-line electrical diagram::
 
 ![Setup](Documentation/Combined_ETA.png)
 (Rendering from Stantec Architecture)
@@ -35,24 +35,28 @@ Line plots of event data are presented such that the data of separate PMUs are p
 One example application of the data is the clustering of events and parameter to predict its severity and duration (see below in Swenson et. al. 2019). Here the minimum slope of a voltage sag achieved in region two with the absolute minimum voltage of the entire event achieved in region 3 was correlated and a prediction model was formed. An illustration of these regions superimposed upon a sample voltage sag is illustrated below:
 
 
-Finally, this repository includes sample clusterings of all events within the PMU Event Library by their time-series voltage and current data. In this way, “classes” of events may be determined to possibly aid in the development of predictive control schemes. For details on event clustering, refer to the [PMU Event Detection](https://bitbucket.org/cgehbauer/upmu_analysis/src/master/PMU_Event_Detection_v0.1/) package. 
+Finally, this repository includes sample clusterings of all events within the PMU Event Library by their time-series voltage and current data. In this way, “classes” of events may be determined to possibly aid in the development of predictive control schemes.
 
 ## Third Party Software
 The PMU Event Library only includes .csv files as data source. However an instructional Python Jupyter notebook is available familiarize with the data. The requirements are `pandas` and `matplotlib` which are typical packages for data processing in Python.
 
-The dependencies from pypi can be installed with `pip install -r requirements.txt`. 
+The dependencies can be installed with `pip install -r requirements.txt`. 
 
 ## Getting Started
-The following link permits users or developers to clone the source directory containing the the [PMU Event Library](https://bitbucket.org/cgehbauer/upmu_analysis/src/master/PMU_Event_Library_v0.1/) package.
+The following link permits users or developers to clone the source directory containing the the [PMU Event Library](https://github.com/LBNL-ETA/pmu_event_library) package.
 
-Or use `git clone git@bitbucket.org:cgehbauer/upmu_analysis.git`
+Or use `git clone https://github.com/LBNL-ETA/pmu_event_library.git`
 
-User instructions can be found in the form of a guided Jupyter notebook [here](https://bitbucket.org/cgehbauer/upmu_analysis/src/master/uPMU_Event_Library_v0.1/Examples/).
+User instructions can be found in the form of a guided Jupyter notebook [here](Examples).
 
-In the [Event_Library_Instructional.ipynb](Event_Library_Instructional.ipynb), a count of total events contained within the library is conducted, event timestamps and columns are described, and a sample event voltage visualization is presented to provide an overview of the library.
+In the [Event_Library_Instructional.ipynb](Examples/Event_Library_Instructional.ipynb), a count of total events contained within the library is conducted, event timestamps and columns are described, and a sample event voltage visualization is presented to provide an overview of the library.
 
 ## License
-The open-source license for the PMU Event Library can be found here: [TBD](Link).
+PMU event library Copyright (c) 2019, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Dept. of Energy).  All rights reserved.
+
+If you have questions about your rights to use or distribute this software, please contact Berkeley Lab's Intellectual Property Office at IPO@lbl.gov.
+
+NOTICE.  This Software was developed under funding from the U.S. Department of Energy and the U.S. Government consequently retains certain rights.  As such, the U.S. Government has been granted for itself and others acting on its behalf a paid-up, nonexclusive, irrevocable, worldwide license in the Software to reproduce, distribute copies to the public, prepare derivative works, and perform publicly and display publicly, and to permit other to do so.
 
 ## Cite
 To cite the PMU Event Library, please use:
